@@ -1,46 +1,50 @@
 const cookieParser = require("cookie-parser");
 const express = require("express");
+const { engine } = require('express-handlebars');
 const { google } = require("googleapis");
 require('dotenv').config()
 
 const PORT = process.env.PORT || 5000
 const CLIENT_ID = process.env.CLIENT_ID
 
-//Google Auth
+// Google Auth
 const {OAuth2Client} = require('google-auth-library');
 const client = new OAuth2Client(CLIENT_ID);
 
 
 const app = express();
-app.set("view engine", "ejs");
+app.use(express.static('public'));
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views', './views');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-function checkAuthenticated(req, res, next){
+// function checkAuthenticated(req, res, next){
 
-  let token = req.cookies['session-token'];
-  let user = {};
-  async function verify() {
-      const ticket = await client.verifyIdToken({
-          idToken: token,
-          audience: CLIENT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
-      });
-      const payload = ticket.getPayload();
-      user.name = payload.name;
-      user.email = payload.email;
-      user.picture = payload.picture;
-    }
-    verify()
-    .then(()=>{
-        req.user = user;
-        next();
-    })
-    .catch(err=>{
-        res.redirect('/login')
-    })
+//   let token = req.cookies['session-token'];
+//   let user = {};
+//   async function verify() {
+//       const ticket = await client.verifyIdToken({
+//           idToken: token,
+//           audience: CLIENT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
+//       });
+//       const payload = ticket.getPayload();
+//       user.name = payload.name;
+//       user.email = payload.email;
+//       user.picture = payload.picture;
+//     }
+//     verify()
+//     .then(()=>{
+//         req.user = user;
+//         next();
+//     })
+//     .catch(err=>{
+//         res.redirect('/login')
+//     })
 
-}
+// }
 
 app.get("/editor", (req, res) => {
   // let user = req.user
@@ -49,40 +53,43 @@ app.get("/editor", (req, res) => {
     name: 'O. Ester'
   }
   res.render("editor", {user});
+  // res.render("editor");
 });
 
-app.get("/login", (req, res) => {
-  res.render("login");
-});
+// app.get("/login", (req, res) => {
+//   res.render("login");
+// });
 
-app.post("/login", (req, res) => {
-  let token = req.body.token
-  async function verify() {
-    const ticket = await client.verifyIdToken({
-        idToken: token,
-        audience: CLIENT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
-        // Or, if multiple clients access the backend:
-        //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
-    });
-    const payload = ticket.getPayload();
-    const userid = payload['sub'];
-    // If request specified a G Suite domain:
-    // const domain = payload['hd'];
-    // console.log(payload)
-  }
-  verify()
-  .then(()=>{
-    res.cookie("session token", token)
-    res.send('success')
-  })
-  .catch(console.error);
+// app.post("/login", (req, res) => {
+//   let token = req.body.token
+//   async function verify() {
+//     const ticket = await client.verifyIdToken({
+//         idToken: token,
+//         audience: CLIENT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
+//         // Or, if multiple clients access the backend:
+//         //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
+//     });
+//     const payload = ticket.getPayload();
+//     const userid = payload['sub'];
+//     // If request specified a G Suite domain:
+//     // const domain = payload['hd'];
+//     // console.log(payload)
+//   }
+//   verify()
+//   .then(()=>{
+//     req.user = user;
+//     res.cookie("session token", token)
+//     res.send('success')
+//     res.redirect('/editor', {user})
+//   })
+//   .catch(console.error);
   
-});
+// });
 
-app.get('/logout', (req, res)=>{
-  res.clearCookie('session-token')
-  res.redirect('/login')
-})
+// app.get('/logout', (req, res)=>{
+//   res.clearCookie('session-token')
+//   res.redirect('/login')
+// })
 
 app.post("/editor", async (req, res) => {
   const { first_name, last_name, email, age } = req.body;
@@ -118,13 +125,14 @@ app.post("/editor", async (req, res) => {
   });
 
   // Read rows from spreadsheet
-  const getRows = await googleSheets.spreadsheets.values.get({
-    auth,
-    spreadsheetId,
-    range: "Sheet1!A1:D",
-  });
+  // const getRows = await googleSheets.spreadsheets.values.get({
+  //   auth,
+  //   spreadsheetId,
+  //   range: "Sheet1!A1:D",
+  // });
 
-  res.send(getRows.data.values);
+  // res.send(getRows.data.values);
+  res.send('Success')
 });
 
 app.get("/", async (req, res) => {
@@ -150,6 +158,11 @@ app.get("/", async (req, res) => {
   });
 
   res.send(getRows.data.values);
+});
+
+app.get('/api/data', (req, res) => {
+  const data = [100, 50, 300, 40, 350, 250]; // assuming this is coming from the database
+  res.json(data);
 });
 
 
