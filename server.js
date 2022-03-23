@@ -2,6 +2,7 @@ const cookieParser = require("cookie-parser");
 const express = require("express");
 const { engine } = require('express-handlebars');
 const { google } = require("googleapis");
+const  creds  = require('./creds');
 require('dotenv').config()
 
 const PORT = process.env.PORT || 5000
@@ -101,7 +102,8 @@ app.post("/form", async (req, res) => {
   const { first_name, last_name, email, age } = req.body;
 
   const auth = new google.auth.GoogleAuth({
-    keyFile: "credentials02.json",
+    // keyFile: "credentials02.json",
+    credentials: creds,
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
 
@@ -144,7 +146,8 @@ app.post("/form", async (req, res) => {
 app.get("/excel", async (req, res) => {
 
   const auth = new google.auth.GoogleAuth({
-    keyFile: "credentials.json",
+    // keyFile: "credentials.json",
+    credentials: creds,
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
 
