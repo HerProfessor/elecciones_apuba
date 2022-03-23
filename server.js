@@ -6,7 +6,7 @@ const  creds  = require('./creds');
 require('dotenv').config()
 
 const PORT = process.env.PORT || 5000
-const CLIENT_ID = process.env.CLIENT_ID
+const CLIENT_ID = process.env.CLIENT_ID_AUTH
 
 // Google Auth
 const {OAuth2Client} = require('google-auth-library');
