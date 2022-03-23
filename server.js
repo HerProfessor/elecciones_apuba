@@ -62,9 +62,9 @@ app.get("/form", (req, res) => {
   // res.render("editor");
 });
 
-// app.get("/login", (req, res) => {
-//   res.render("login");
-// });
+app.get("/login", (req, res) => {
+  res.render("login");
+});
 
 // app.post("/login", (req, res) => {
 //   let token = req.body.token
