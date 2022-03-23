@@ -14,9 +14,11 @@ const client = new OAuth2Client(CLIENT_ID);
 
 const app = express();
 app.use(express.static('public'));
+
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
@@ -46,13 +48,17 @@ app.use(cookieParser());
 
 // }
 
-app.get("/editor", (req, res) => {
+app.get('/', (req, res) => {
+  res.render('home');
+});
+
+app.get("/form", (req, res) => {
   // let user = req.user
   let user = {
     picture: 'https://lh3.googleusercontent.com/a-/AOh14GjE5dXD9oc4Qvo7yBReWn96onQrFc-yLIH1d60=s96-c',
     name: 'O. Ester'
   }
-  res.render("editor", {user});
+  res.render("form", {user});
   // res.render("editor");
 });
 
@@ -135,7 +141,7 @@ app.post("/editor", async (req, res) => {
   res.send('Success')
 });
 
-app.get("/", async (req, res) => {
+app.get("/excel", async (req, res) => {
 
   const auth = new google.auth.GoogleAuth({
     keyFile: "credentials.json",
