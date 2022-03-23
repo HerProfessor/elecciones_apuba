@@ -97,11 +97,11 @@ app.get("/form", (req, res) => {
 //   res.redirect('/login')
 // })
 
-app.post("/editor", async (req, res) => {
+app.post("/form", async (req, res) => {
   const { first_name, last_name, email, age } = req.body;
 
   const auth = new google.auth.GoogleAuth({
-    keyFile: "credentials.json",
+    keyFile: "credentials02.json",
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
 
