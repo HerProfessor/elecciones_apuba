@@ -3,6 +3,7 @@ const express = require("express");
 const { engine } = require('express-handlebars');
 const { google } = require("googleapis");
 const  creds  = require('./creds');
+fs = require('fs')
 require('dotenv').config()
 
 const PORT = process.env.PORT || 5000
@@ -170,8 +171,15 @@ app.get("/excel", async (req, res) => {
 });
 
 app.get('/api/data', (req, res) => {
-  const data = [100, 50, 300, 40, 350, 250]; // assuming this is coming from the database
-  res.json(data);
+  // const data = [100, 50, 300, 40, 350, 250]; // assuming this is coming from the database
+
+    fs.readFile('./flare.json', 'utf8', function (err,data) {
+      if (err) {
+        return console.log(err);
+      }
+      // console.log(data);
+      res.send(data);
+    });
 });
 
 
