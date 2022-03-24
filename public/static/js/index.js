@@ -27,7 +27,7 @@ $.getJSON( "/api/data", function( data ) {
 			let color = d3.scaleOrdinal().range(d3.quantize(d3.interpolateRainbow, data.children.length + 1));
 			let format = d3.format(",d");
 
-			let width = 632;
+			let width = 650;
 			let radius = width / 6;
 
 			let arc = d3.arc()
@@ -44,10 +44,11 @@ $.getJSON( "/api/data", function( data ) {
 			root.each(d => d.current = d);
 
 			// const svg = d3.select(DOM.svg(width, width))
-			const svg = d3.select("body").append("svg")
+			const svg = d3.select("#chart").append("svg")
 			.style("width", width)
 			.style("height", width)
-			.style("font", "10px sans-serif");
+			.style("font", "10px sans-serif")
+      
 
 			const g = svg.append("g")
 			.attr("transform", `translate(${width / 2},${width / 2})`);
@@ -130,11 +131,11 @@ $.getJSON( "/api/data", function( data ) {
 				return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
 			}
 
-      d3.select("#chart").append("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .append("g")
-      .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
+      // d3.select("#chart").append("svg")
+      // .attr("width", width)
+      // .attr("height", height)
+      // .append("g")
+      // .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
 });
 
 
