@@ -1,6 +1,5 @@
-// import * as d3 from "https://cdn.skypack.dev/d3@7";
+
 // import * as d3 from "https://d3js.org/d3.v5.min.js";
-// import * as topojson from "https://d3js.org/topojson.v1.min.js";
 // import axios from 'https://cdn.skypack.dev/axios';
 
 // const dataSet = async function getData() {
@@ -8,7 +7,6 @@
 // }
 
 
-// $.getJSON( "https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa5529b32156aa6e71cf985263f/flare.json", function( data ) {
 $.getJSON( "/api/data", function( data ) {
 
 			console.log(data);
@@ -48,6 +46,7 @@ $.getJSON( "/api/data", function( data ) {
 			.style("width", width)
 			.style("height", width)
 			.style("font", "10px sans-serif")
+      .style("padding","35px")
       
 
 			const g = svg.append("g")
