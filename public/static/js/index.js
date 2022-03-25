@@ -46,7 +46,7 @@ $.getJSON( "/api/data", function( data ) {
 			.style("width", width)
 			.style("height", width)
 			.style("font", "10px sans-serif")
-      .style("padding","35px")
+      		.style("padding","5em")
       
 
 			const g = svg.append("g")

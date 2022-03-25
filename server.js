@@ -3,6 +3,8 @@ const express = require("express");
 const { engine } = require('express-handlebars');
 const { google } = require("googleapis");
 const  creds  = require('./creds');
+const arrayToJSONObject = require('./utils/arrayToJSONObject')
+
 fs = require('fs')
 require('dotenv').config()
 
@@ -126,7 +128,7 @@ app.post("/form", async (req, res) => {
   await googleSheets.spreadsheets.values.append({
     auth,
     spreadsheetId,
-    range: "Sheet1!A:D",
+    range: "Sheet1!A:E",
     valueInputOption: "USER_ENTERED",
     resource: {
       values: [[first_name, last_name, email, age]],
@@ -164,11 +166,17 @@ app.get("/excel", async (req, res) => {
   const getRows = await googleSheets.spreadsheets.values.get({
     auth,
     spreadsheetId,
-    range: "Sheet1!A1:D",
+    range: "Sheet1!A1:E",
   });
 
+
+  const data = await getRows.data.values
+  
+ 
+  console.log(arrayToJSONObject(data))
   res.send(getRows.data.values);
 });
+
 
 app.get('/api/data', (req, res) => {
   // const data = [100, 50, 300, 40, 350, 250]; // assuming this is coming from the database
