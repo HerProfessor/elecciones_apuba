@@ -128,10 +128,10 @@ app.post("/form", async (req, res) => {
   await googleSheets.spreadsheets.values.append({
     auth,
     spreadsheetId,
-    range: "Sheet1!A:E",
+    range: "Sheet1!A:F",
     valueInputOption: "USER_ENTERED",
     resource: {
-      values: [[first_name, last_name, email, age]],
+      values: [[urna, listaVerde, listaRoja, nulo, blanco, observado]],
     },
   });
 
@@ -166,7 +166,7 @@ app.get("/excel", async (req, res) => {
   const getRows = await googleSheets.spreadsheets.values.get({
     auth,
     spreadsheetId,
-    range: "Sheet1!A1:E",
+    range: "Sheet1!A1:F",
   });
 
 
