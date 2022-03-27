@@ -9,11 +9,11 @@ fs = require('fs')
 require('dotenv').config()
 
 const PORT = process.env.PORT || 5000
-const CLIENT_ID = process.env.CLIENT_ID_AUTH
+// const CLIENT_ID = process.env.CLIENT_ID_AUTH
 
-// Google Auth
-const {OAuth2Client} = require('google-auth-library');
-const client = new OAuth2Client(CLIENT_ID);
+// // Google Auth
+// const {OAuth2Client} = require('google-auth-library');
+// const client = new OAuth2Client(CLIENT_ID);
 
 
 const app = express();
@@ -21,11 +21,14 @@ app.use(express.static('public'));
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
+app.set('views', './views/partials')
 app.set('views', './views');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
+
+
 
 // function checkAuthenticated(req, res, next){
 
@@ -52,8 +55,15 @@ app.use(cookieParser());
 
 // }
 
-app.get('/', (req, res) => {
-  res.render('home');
+app.get('/', async (req, res) => {
+  // res.render('home');
+  const sedes = [{name: "Roffo", id: "one", style: "style1"},
+  {name: "Lanari", id: "two", style: "style2"},
+  {name: "Tizzi", id: "one", style: "style1"}]
+    
+  
+  console.log(sedes)
+  res.status(200).render('home', { sedes: sedes});
 });
 
 app.get("/form", (req, res) => {
@@ -68,6 +78,10 @@ app.get("/form", (req, res) => {
 
 app.get("/login", (req, res) => {
   res.render("login");
+});
+
+app.get("/totales", (req, res) => {
+  res.render("totales");
 });
 
 // app.post("/login", (req, res) => {

@@ -1,10 +1,63 @@
 
-<body>
-    <h1> Representacion de valores.</h1>
-    <div id="chart">
-    
-    </div>
+<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Elecciones Apuba</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="totales">Totales</a></li>
+								<li><a href="#">Log In</a></li>
+							</ul>
+							<a href="#" class="close">Cerrar</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon fa-envelope-open"></span></div>
+							<h2>This is Solid State</h2>
+							<p>Another free + fully responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+                        {{>lista}}
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
 </body>
 
-<script type="module" src="./static/js/index.js"></script>
-</html>
+		<!-- Scripts -->
+    <script src="./static/js/jquery.min.js"></script>
+    <script src="./static/js/jquery.scrollex.min.js"></script>
+    <script src="./static/js/browser.min.js"></script>
+    <script src="./static/js/breakpoints.min.js"></script>
+    <script src="./static/js/util.js"></script>
+    <script src="./static/js/main.js"></script>
+    
+    {{!-- <script type="module" src="./static/js/index.js"></script> --}}
+

@@ -25,7 +25,8 @@ $.getJSON( "/api/data", function( data ) {
 			let color = d3.scaleOrdinal().range(d3.quantize(d3.interpolateRainbow, data.children.length + 1));
 			let format = d3.format(",d");
 
-			let width = 650;
+			// let width = 650;
+			let width = $(window).width()/2;
 			let radius = width / 6;
 
 			let arc = d3.arc()
@@ -43,8 +44,8 @@ $.getJSON( "/api/data", function( data ) {
 
 			// const svg = d3.select(DOM.svg(width, width))
 			const svg = d3.select("#chart").append("svg")
-			.style("width", width)
-			.style("height", width)
+			.style("width", `100%`)
+			.style("height", $(window).width()/1.5)
 			.style("font", "10px sans-serif")
       		.style("padding","5em")
       
