@@ -1,8 +1,9 @@
 const cookieParser = require("cookie-parser");
 const express = require("express");
+var cors = require('cors')
 const { engine } = require('express-handlebars');
 const { google } = require("googleapis");
-const  creds  = require('./creds');
+const  creds  = require('./utils/creds');
 const arrayToJSONObject = require('./utils/arrayToJSONObject')
 
 fs = require('fs')
@@ -17,6 +18,7 @@ const PORT = process.env.PORT || 5000
 
 
 const app = express();
+app.use(cors())
 app.use(express.static('public'));
 
 app.engine('handlebars', engine());
@@ -57,13 +59,19 @@ app.use(cookieParser());
 
 app.get('/', async (req, res) => {
   // res.render('home');
-  const sedes = [{name: "Roffo", id: "one", style: "style1"},
-  {name: "Lanari", id: "two", style: "style2"},
-  {name: "Tizzi", id: "one", style: "style1"}]
-    
-  
-  console.log(sedes)
-  res.status(200).render('home', { sedes: sedes});
+  // const sedes = [{name: "Roffo", id: "one", style: "style1"},
+  // {name: "Lanari", id: "two", style: "style2"},
+  // {name: "Tizzi", id: "one", style: "style1"}]
+  fs.readFile('./flare.json', 'utf8', function (err,data) {
+    if (err) {
+      return console.log(err);
+    }
+    // console.log(data);
+    // res.send(data);
+    let sedes = JSON.parse(data)
+    console.log(sedes.children)
+    res.status(200).render('home', { sedes: sedes.children});
+  });
 });
 
 app.get("/form", (req, res) => {

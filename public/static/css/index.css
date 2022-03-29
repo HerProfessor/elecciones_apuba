@@ -1,38 +1,57 @@
-  h1,h2,h3{
-    color: rgb(8, 8, 8);
-    margin:0;
-    line-height:1;
+  spam {
+    margin: 0px;
   }
-  h1{
-    font-size: 3em;
-    text-align: center;
+
+  h4 {
+    margin: 0 0 0 0 !important;
+    line-height: .5em !important;
+    text-align: left;
+
   }
-  h2{
-    font-size: 4em
+  
+  .cajaBarra
+  {
+    box-sizing: border-box;
+    width: 100%;
   }
-  h3{
-    font-size: 1.2em;
+
+  .cajaBarra p
+  {
+    color: rgb(5, 5, 5);
     text-transform: uppercase;
-  }
-  h2{
-    text-align: justify;
-  }
-  p{
-    font-size:1.5em;
-    color:#fff;
-  }
-  .wrapper{
-    height:250px;
-    border:1px solid #fff;
-  }
-  .flex-container{
-    height:250px;
-    border:1px solid #fff;
-    display:flex;
-  }
-  .flex-items{
-    border:2px solid  #fff;
-    flex: 1 1 0;
+    margin: 0 0 10px;
+    padding: 0;
+    font-family: bold;
+    letter-spacing: 1px;
   }
 
+  .cajaBarra spam p:nth-child(2)
+  {
+    float: right;
+    position: relative;
+    top: -20px;
+    font-weight: bold;
+  }
 
+  .barra
+  {
+    background: #ffffff;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+  }
+
+  .nivelbarraroja
+  {
+    background: #bb2c1f;
+    width: 100%;
+    height: 30px;
+  }
+
+  .nivelbarraverde
+  {
+    background: #31b442;
+    width: 100%;
+    height: 30px;
+  }
