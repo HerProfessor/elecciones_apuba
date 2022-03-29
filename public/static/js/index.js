@@ -26,7 +26,8 @@ $.getJSON( "/api/data", function( data ) {
 			let format = d3.format(",d");
 
 			// let width = 650;
-			let width = $(window).width()/2;
+			// let width = $(window).width()/2;
+			let width = 600;
 			let radius = width / 6;
 
 			let arc = d3.arc()
@@ -44,10 +45,11 @@ $.getJSON( "/api/data", function( data ) {
 
 			// const svg = d3.select(DOM.svg(width, width))
 			const svg = d3.select("#chart").append("svg")
-			.style("width", `100%`)
-			.style("height", $(window).width()/1.5)
+			.style("width", `1200px`)
+			.style("height", "800px")
+			// .style("height", $(window).width()/1.5)
 			.style("font", "10px sans-serif")
-      		.style("padding","5em")
+      		.style("padding","2em")
       
 
 			const g = svg.append("g")
@@ -85,7 +87,22 @@ $.getJSON( "/api/data", function( data ) {
 			.attr("r", radius)
 			.attr("fill", "none")
 			.attr("pointer-events", "all")
-			.on("click", clicked);
+			.on("clicked", clicked)
+			.on("mouseout", onMouseOut);
+
+			function onMouseOut(d, i) {
+				// use the text label class to remove label on mouseout
+				d3.select(this).attr('class', 'bar');
+				d3.select(this)
+				  .transition()     // adds animation
+				  .duration(400)
+				  .attr('width', x.bandwidth())
+				  .attr("y", function(d) { return y(d.value); })
+				  .attr("height", function(d) { return height - y(d.value); });
+		
+				d3.selectAll('.val')
+				  .remove()
+			}
 
 			function clicked(p) {
 				parent.datum(p.parent || root);
@@ -131,11 +148,11 @@ $.getJSON( "/api/data", function( data ) {
 				return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
 			}
 
-      // d3.select("#chart").append("svg")
-      // .attr("width", width)
-      // .attr("height", height)
-      // .append("g")
-      // .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
+      d3.select("#chart").append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .append("g")
+      .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
 });
 
 

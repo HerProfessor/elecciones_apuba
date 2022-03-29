@@ -1,55 +1,4 @@
 
-{{!-- <body class="is-preload">
-
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
-
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Elecciones Apuba</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="totales">Totales</a></li>
-								<li><a href="#">Log In</a></li>
-							</ul>
-							<a href="#" class="close">Cerrar</a>
-						</div>
-					</nav>
-
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><span class="icon fa-envelope-open"></span></div>
-							<h2>This is Solid State</h2>
-							<p>Another free + fully responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
-						</div>
-					</section>
-
-				<!-- Wrapper -->
-					<section id="wrapper">
-                        {{>lista}}
-					</section>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
-
-			</div>
-</body> --}}
 <body class="is-preload">
 
 		<!-- Header -->
@@ -83,7 +32,7 @@
 				</div>
 			</section>
 
-		<!-- Two -->
+		<!-- Three -->
 			<section id="three" class="main style1 special">
 				<div class="container">
 					<header class="major">
@@ -95,7 +44,32 @@
 					</div>
 				</div>
 			</section>
+		<!-- Button trigger modal -->
+			<section id="two" class="main style1 special">
+				<button type="button" class="button scrolly" data-toggle="modal" data-target="#exampleModalCenter">
+				Ver todos los datos.
+				</button>
 
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content" style="width: auto !important;">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						{{>totales}}
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="button scrolly" data-dismiss="modal">Cerrar</button>
+					</div>
+					</div>
+				</div>
+				</div>
+			</section>
 		<!-- Four -->
 			<section id="four" class="main style2 special">
 				<div class="container">

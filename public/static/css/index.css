@@ -55,3 +55,7 @@
     width: 100%;
     height: 30px;
   }
+
+  .chart{
+    box-sizing: content-box;
+  }
