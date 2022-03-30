@@ -57,36 +57,70 @@ app.use(cookieParser());
 
 // }
 
+// app.get('/', async (req, res) => {
+//   // res.render('home');
+//   // const sedes = [{name: "Roffo", id: "one", style: "style1"},
+//   // {name: "Lanari", id: "two", style: "style2"},
+//   // {name: "Tizzi", id: "one", style: "style1"}]
+//   fs.readFile('./flare.json', 'utf8', function (err,data) {
+//     if (err) {
+//       return console.log(err);
+//     }
+//     // console.log(data);
+//     // res.send(data);
+//     let sedes = JSON.parse(data)
+//     console.log(sedes.children)
+//     res.status(200).render('home', { sedes: sedes.children});
+//   });
+// });
+
 app.get('/', async (req, res) => {
-  // res.render('home');
-  // const sedes = [{name: "Roffo", id: "one", style: "style1"},
-  // {name: "Lanari", id: "two", style: "style2"},
-  // {name: "Tizzi", id: "one", style: "style1"}]
-  fs.readFile('./flare.json', 'utf8', function (err,data) {
-    if (err) {
-      return console.log(err);
-    }
-    // console.log(data);
-    // res.send(data);
-    let sedes = JSON.parse(data)
-    console.log(sedes.children)
-    res.status(200).render('home', { sedes: sedes.children});
+
+  const auth = new google.auth.GoogleAuth({
+    // keyFile: "credentials.json",
+    credentials: creds,
+    scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
+
+  // Create client instance for auth
+  const client = await auth.getClient();
+
+  // Instance of Google Sheets API
+  const googleSheets = google.sheets({ version: "v4", auth: client });
+
+  const spreadsheetId = process.env.SPREADSHEET_ID;
+
+  // Read rows from spreadsheet
+  const getRows = await googleSheets.spreadsheets.values.get({
+    auth,
+    spreadsheetId,
+    range: "Sheet2!A1:F",
+  });
+
+
+  const data = await getRows.data.values
+  const verde_gral = data[1][4]
+  const roja_gral = data[1][5]
+ 
+  //res.send(getRows.data.values);
+
+    res.status(200).render('home', { sedes: arrayToJSONObject(data), verde: verde_gral, roja: roja_gral});
+
 });
 
-app.get("/form", (req, res) => {
-  // let user = req.user
-  let user = {
-    picture: 'https://lh3.googleusercontent.com/a-/AOh14GjE5dXD9oc4Qvo7yBReWn96onQrFc-yLIH1d60=s96-c',
-    name: 'O. Ester'
-  }
-  res.render("form", {user});
-  // res.render("editor");
-});
+// app.get("/form", (req, res) => {
+//   // let user = req.user
+//   let user = {
+//     picture: 'https://lh3.googleusercontent.com/a-/AOh14GjE5dXD9oc4Qvo7yBReWn96onQrFc-yLIH1d60=s96-c',
+//     name: 'O. Ester'
+//   }
+//   res.render("form", {user});
+//   // res.render("editor");
+// });
 
-app.get("/login", (req, res) => {
-  res.render("login");
-});
+// app.get("/login", (req, res) => {
+//   res.render("login");
+// });
 
 app.get("/totales", (req, res) => {
   res.render("totales");
@@ -123,50 +157,42 @@ app.get("/totales", (req, res) => {
 //   res.redirect('/login')
 // })
 
-app.post("/form", async (req, res) => {
-  const { first_name, last_name, email, age } = req.body;
+// app.post("/form", async (req, res) => {
+//   const { first_name, last_name, email, age } = req.body;
 
-  const auth = new google.auth.GoogleAuth({
-    // keyFile: "credentials02.json",
-    credentials: creds,
-    scopes: "https://www.googleapis.com/auth/spreadsheets",
-  });
+//   const auth = new google.auth.GoogleAuth({
+//     // keyFile: "credentials02.json",
+//     credentials: creds,
+//     scopes: "https://www.googleapis.com/auth/spreadsheets",
+//   });
 
-  // Create client instance for auth
-  const client = await auth.getClient();
+//   // Create client instance for auth
+//   const client = await auth.getClient();
 
-  // Instance of Google Sheets API
-  const googleSheets = google.sheets({ version: "v4", auth: client });
+//   // Instance of Google Sheets API
+//   const googleSheets = google.sheets({ version: "v4", auth: client });
 
-  const spreadsheetId = process.env.SPREADSHEET_ID;
+//   const spreadsheetId = process.env.SPREADSHEET_ID;
 
-  // // Get metadata about spreadsheet
-  // const metaData = await googleSheets.spreadsheets.get({
-  //   auth,
-  //   spreadsheetId,
-  // });
+//   // // Get metadata about spreadsheet
+//   // const metaData = await googleSheets.spreadsheets.get({
+//   //   auth,
+//   //   spreadsheetId,
+//   // });
 
-  // Write row(s) to spreadsheet
-  await googleSheets.spreadsheets.values.append({
-    auth,
-    spreadsheetId,
-    range: "Sheet1!A:F",
-    valueInputOption: "USER_ENTERED",
-    resource: {
-      values: [[urna, listaVerde, listaRoja, nulo, blanco, observado]],
-    },
-  });
+//   // Write row(s) to spreadsheet
+//   await googleSheets.spreadsheets.values.append({
+//     auth,
+//     spreadsheetId,
+//     range: "Sheet1!A:F",
+//     valueInputOption: "USER_ENTERED",
+//     resource: {
+//       values: [[urna, listaVerde, listaRoja, nulo, blanco, observado]],
+//     },
+//   });
 
-  // Read rows from spreadsheet
-  // const getRows = await googleSheets.spreadsheets.values.get({
-  //   auth,
-  //   spreadsheetId,
-  //   range: "Sheet1!A1:D",
-  // });
-
-  // res.send(getRows.data.values);
-  res.send('Success')
-});
+//   res.send('Success')
+// });
 
 app.get("/excel", async (req, res) => {
 
@@ -188,14 +214,14 @@ app.get("/excel", async (req, res) => {
   const getRows = await googleSheets.spreadsheets.values.get({
     auth,
     spreadsheetId,
-    range: "Sheet1!A1:F",
+    range: "Sheet2!A1:F",
   });
 
 
   const data = await getRows.data.values
   
  
-  console.log(arrayToJSONObject(data))
+  // console.log(arrayToJSONObject(data))
   res.send(getRows.data.values);
 });
 

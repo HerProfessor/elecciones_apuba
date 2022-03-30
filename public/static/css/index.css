@@ -36,7 +36,7 @@
   .barra
   {
     background: #ffffff;
-    padding: 15px;
+    padding: 10px;
     box-sizing: border-box;
     border: 1px solid #ffffff;
     border-radius: 2px;
@@ -46,14 +46,14 @@
   {
     background: #bb2c1f;
     width: 100%;
-    height: 30px;
+    height: 20px;
   }
 
   .nivelbarraverde
   {
     background: #31b442;
     width: 100%;
-    height: 30px;
+    height: 20px;
   }
 
   .chart{

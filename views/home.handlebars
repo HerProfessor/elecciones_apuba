@@ -18,15 +18,15 @@
 			<section id="one" class="main style1">
 				<div class="container">
 					<div class="row gtr-150">
+						<div class="col-6 col-12-medium imp-medium">
+							{{>parciales}}
+						</div>
 						<div class="col-6 col-12-medium">
 							<header class="major">
 								<h2>Lorem ipsum dolor adipiscing<br />
 								amet dolor consequat</h2>
 							</header>
 							<p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
-						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="static/images/pic01.jpg" alt="" /></span>
 						</div>
 					</div>
 				</div>
@@ -44,32 +44,11 @@
 					</div>
 				</div>
 			</section>
-		<!-- Button trigger modal -->
-			<section id="two" class="main style1 special">
-				<button type="button" class="button scrolly" data-toggle="modal" data-target="#exampleModalCenter">
-				Ver todos los datos.
-				</button>
-
-				<!-- Modal -->
-				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="modal-content" style="width: auto !important;">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-						</button>
-						{{>totales}}
-					</div>
-					<div class="modal-body">
-						...
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="button scrolly" data-dismiss="modal">Cerrar</button>
-					</div>
-					</div>
+				<div class="container" style="padding: 2rem; display: center">
+			        <button type="button" class="button scrolly">
+						Ver todos los datos.	
+					</button>
 				</div>
-				</div>
-			</section>
 		<!-- Four -->
 			<section id="four" class="main style2 special">
 				<div class="container">

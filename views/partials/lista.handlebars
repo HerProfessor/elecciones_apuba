@@ -1,18 +1,18 @@
 {{#each sedes}}
                 <div class="col-4 col-12-medium">
                     <span class="image fit "><img src="static/images/pic04.jpg" alt="" /></span>
-                    <h2>{{this.name}}</h2>
+                    <h2>{{this.sedes}}</h2>
                         <div>
                             <div class="cajaBarra">
-                                <spam><h4>Lista Verde</h4><p>90%</p></spam>
+                                <spam><h4>Lista Verde</h4><p>{{this.por_verde}}%</p></spam>
                                 <div class="barra">
-                                    <div class="nivelbarraverde" style="width: 90%"></div>
+                                    <div class="nivelbarraverde" style="width: {{this.por_verde}}%"></div>
                                 </div>
                             </div>
                             <div class="cajaBarra">
-                                <spam><h4>Lista Roja</h4><p>10%</p></spam>
+                                <spam><h4>Lista Roja</h4><p>{{this.por_roja}}%</p></spam>
                                 <div class="barra">
-                                    <div class="nivelbarraroja" style="width: 10%"></div>
+                                    <div class="nivelbarraroja" style="width: {{this.por_roja}}%"></div>
                                 </div>
                             </div>
                         </div>
