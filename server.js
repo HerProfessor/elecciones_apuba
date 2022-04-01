@@ -108,15 +108,15 @@ app.get('/', async (req, res) => {
 
 });
 
-// app.get("/form", (req, res) => {
-//   // let user = req.user
-//   let user = {
-//     picture: 'https://lh3.googleusercontent.com/a-/AOh14GjE5dXD9oc4Qvo7yBReWn96onQrFc-yLIH1d60=s96-c',
-//     name: 'O. Ester'
-//   }
-//   res.render("form", {user});
-//   // res.render("editor");
-// });
+app.get("/form", (req, res) => {
+  // let user = req.user
+  let user = {
+    picture: 'https://lh3.googleusercontent.com/a-/AOh14GjE5dXD9oc4Qvo7yBReWn96onQrFc-yLIH1d60=s96-c',
+    name: 'O. Ester'
+  }
+  res.render("form", {user});
+  // res.render("editor");
+});
 
 // app.get("/login", (req, res) => {
 //   res.render("login");
@@ -194,9 +194,10 @@ app.get("/totales", (req, res) => {
 //   res.send('Success')
 // });
 
-app.patch("/form", async (req, res) => {
+app.post("/form", async (req, res) => {
   const { urna, lista_verde, lista_roja, nulo, blanco, observado } = req.body;
-  const rango = urna - 1
+  const rango = parseInt(urna) + 1
+  console.log(rango)
 
   const auth = new google.auth.GoogleAuth({
     // keyFile: "credentials02.json",
@@ -211,16 +212,34 @@ app.patch("/form", async (req, res) => {
   const googleSheets = google.sheets({ version: "v4", auth: client });
 
   const spreadsheetId = process.env.SPREADSHEET_ID;
-
+  let sheetRange = `Sheet1!B${rango}:F${rango}`
+  let values = [
+        [
+          lista_verde,
+          lista_roja,
+          nulo,
+          blanco,
+          observado
+        ]
+      ];
+  const sheetResource = {
+    values,
+  };
   await googleSheets.spreadsheets.values.update({
     auth,
     spreadsheetId,
-    range: `Sheet1!A:${rango}`,
+    range: sheetRange,
     valueInputOption: "USER_ENTERED",
-    resource: {
-      values: [[urna, lista_verde, lista_roja, nulo, blanco, observado]],
-    },
-  });
+    resource: sheetResource
+  }, function (err, response) {
+    if (err) {
+        console.log('The API returned an error: ' + err);
+    } else {
+        console.log('Succes');   
+        console.log(response.values);
+        
+    }
+ });
 
   res.send('Success')
 });
