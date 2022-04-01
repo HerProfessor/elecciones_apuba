@@ -194,10 +194,12 @@ app.get("/totales", (req, res) => {
 //   res.send('Success')
 // });
 
-app.get("/excel", async (req, res) => {
+app.patch("/form", async (req, res) => {
+  const { urna, lista_verde, lista_roja, nulo, blanco, observado } = req.body;
+  const rango = urna - 1
 
   const auth = new google.auth.GoogleAuth({
-    // keyFile: "credentials.json",
+    // keyFile: "credentials02.json",
     credentials: creds,
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
@@ -210,20 +212,50 @@ app.get("/excel", async (req, res) => {
 
   const spreadsheetId = process.env.SPREADSHEET_ID;
 
-  // Read rows from spreadsheet
-  const getRows = await googleSheets.spreadsheets.values.get({
+  await googleSheets.spreadsheets.values.update({
     auth,
     spreadsheetId,
-    range: "Sheet2!A1:F",
+    range: `Sheet1!A:${rango}`,
+    valueInputOption: "USER_ENTERED",
+    resource: {
+      values: [[urna, lista_verde, lista_roja, nulo, blanco, observado]],
+    },
   });
 
+  res.send('Success')
+});
 
-  const data = await getRows.data.values
+
+// app.get("/excel", async (req, res) => {
+
+//   const auth = new google.auth.GoogleAuth({
+//     // keyFile: "credentials.json",
+//     credentials: creds,
+//     scopes: "https://www.googleapis.com/auth/spreadsheets",
+//   });
+
+//   // Create client instance for auth
+//   const client = await auth.getClient();
+
+//   // Instance of Google Sheets API
+//   const googleSheets = google.sheets({ version: "v4", auth: client });
+
+//   const spreadsheetId = process.env.SPREADSHEET_ID;
+
+//   // Read rows from spreadsheet
+//   const getRows = await googleSheets.spreadsheets.values.get({
+//     auth,
+//     spreadsheetId,
+//     range: "Sheet2!A1:F",
+//   });
+
+
+//   const data = await getRows.data.values
   
  
-  // console.log(arrayToJSONObject(data))
-  res.send(getRows.data.values);
-});
+//   // console.log(arrayToJSONObject(data))
+//   res.send(getRows.data.values);
+// });
 
 
 app.get('/api/data', (req, res) => {
