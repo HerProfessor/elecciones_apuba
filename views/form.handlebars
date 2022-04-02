@@ -1,4 +1,4 @@
-<a href="/logout">Sign Out</a>
+{{!-- <a href="/logout">Sign Out</a>
 <h1>Ingreso de datos</h1>
     <form action="" method="POST">
       <div>
@@ -26,4 +26,44 @@
         <input type="number" id="observado" name="observado" />
       </div>
       <button type="submit">Enviar</button>
-    </form>
+    </form> --}}
+  <div class="container">
+    <div class="border mt-3 text-center bg-primary p-3 rounded-1">
+            <h1 class="mb-5 text-white">Ingreso los datos.</h1>
+          <form action="" method="POST">
+              <select class="form-select mb-5 text-center" aria-label="Default select example" id="combobox1">
+                <option selected>Selecione Sede</option>
+              </select>
+              <select class="form-select text-center" aria-label="Default select example" id="combobox2">
+                  <option selected>-------</option>
+              </select>
+              <div>
+                <label for="urna">Urna</label>
+                <input type="number" id="urna" name="urna" />
+              </div>
+              <div>
+                <label for="lista_verde">Lista Verde</label>
+                <input type="number" id="lista_verde" name="lista_verde" />
+              </div>
+              <div>
+                <label for="lista_roja">Lista Roja</label>
+                <input type="number" id="lista_roja" name="lista_roja" />
+              </div>
+              <div>
+                <label for="nulo">Nulos</label>
+                <input type="number" id="nulo" name="nulo" />
+              </div>
+              <div>
+                <label for="blanco">Blancos</label>
+                <input type="blanco" id="blanco" name="blanco" />
+              </div>
+              <div>
+                <label for="observado">Observados</label>
+                <input type="number" id="observado" name="observado" />
+              </div>
+              <button type="submit">Enviar</button>
+            </form>
+    </div>
+  </div>
+  <!-- añadimos el archivo javascript -->
+  <script src="static/js/formulario.js"></script>
