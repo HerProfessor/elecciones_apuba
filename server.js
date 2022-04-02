@@ -94,17 +94,19 @@ app.get('/', async (req, res) => {
   const getRows = await googleSheets.spreadsheets.values.get({
     auth,
     spreadsheetId,
-    range: "Sheet2!A1:F",
+    range: "Sheet2!A1:K",
   });
 
 
   const data = await getRows.data.values
-  const verde_gral = data[1][4]
-  const roja_gral = data[1][5]
+  const verde_gral = data[1][6]
+  const roja_gral = data[1][7]
+  const nulos = data[1][8]
+  const blancos = data[1][9]
  
-  //res.send(getRows.data.values);
+  // console.log(verde_gral, roja_gral, nulos, blancos);
 
-    res.status(200).render('home', { sedes: arrayToJSONObject(data), verde: verde_gral, roja: roja_gral});
+    res.status(200).render('home', { sedes: arrayToJSONObject(data), verde: verde_gral, roja: roja_gral, nulos: nulos, blancos: blancos});
 
 });
 
@@ -218,8 +220,7 @@ app.post("/form", async (req, res) => {
           lista_verde,
           lista_roja,
           nulo,
-          blanco,
-          observado
+          blanco
         ]
       ];
   const sheetResource = {
@@ -235,7 +236,7 @@ app.post("/form", async (req, res) => {
     if (err) {
         console.log('The API returned an error: ' + err);
     } else {
-        console.log('Succes');   
+        console.log('Succesa');   
         console.log(response.values);
         
     }
