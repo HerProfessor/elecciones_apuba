@@ -1,6 +1,6 @@
 const cookieParser = require("cookie-parser");
 const express = require("express");
-var cors = require('cors')
+// var cors = require('cors')
 const { engine } = require('express-handlebars');
 const { google } = require("googleapis");
 const  creds  = require('./utils/creds');
@@ -10,15 +10,15 @@ fs = require('fs')
 require('dotenv').config()
 
 const PORT = process.env.PORT || 5000
-// const CLIENT_ID = process.env.CLIENT_ID_AUTH
+const CLIENT_ID = process.env.CLIENT_ID_AUTH
 
-// // Google Auth
-// const {OAuth2Client} = require('google-auth-library');
-// const client = new OAuth2Client(CLIENT_ID);
+// Google Auth
+const {OAuth2Client} = require('google-auth-library');
+const client = new OAuth2Client(CLIENT_ID);
 
 
 const app = express();
-app.use(cors())
+// app.use(cors())
 app.use(express.static('public'));
 
 app.engine('handlebars', engine());
