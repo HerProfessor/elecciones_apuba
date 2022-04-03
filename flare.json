@@ -1,0 +1,890 @@
+{
+ "name": "Elecciones 2022",
+ "children": [
+  {
+   "name": "Clinicas",
+   "children": [
+    {
+     "name": "01",
+     "children": [
+      {"name": "Lista Verde", "size": 3938},
+      {"name": "Lista Roja", "size": 3812},
+      {"name": "Nulo", "size": 6714},
+      {"name": "Blanco", "size": 743},
+      {"name": "Observado", "size": 3938}
+     ]
+    },
+    {
+     "name": "02",
+     "children": [
+      {"name": "Lista Verde", "size": 3534},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    },
+    {
+     "name": "03",
+     "children": [
+      {"name": "Lista Verde", "size": 7074},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    },
+    {
+     "name": "04",
+     "children": [
+      {"name": "Lista Verde", "size": 7074},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    },
+    {
+     "name": "05",
+     "children": [
+      {"name": "Lista Verde", "size": 7074},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    },
+    {
+     "name": "06",
+     "children": [
+      {"name": "Lista Verde", "size": 7074},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    },
+    {
+     "name": "07",
+     "children": [
+      {"name": "Lista Verde", "size": 7074},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    },
+    {
+     "name": "08",
+     "children": [
+      {"name": "Lista Verde", "size": 7074},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    },
+    {
+     "name": "09",
+     "children": [
+      {"name": "Lista Verde", "size": 7074},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    },
+    {
+     "name": "10",
+     "children": [
+      {"name": "Lista Verde", "size": 7074},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    },
+    {
+     "name": "11",
+     "children": [
+      {"name": "Lista Verde", "size": 7074},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    },
+    {
+     "name": "12",
+     "children": [
+      {"name": "Lista Verde", "size": 7074},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    },
+    {
+     "name": "13",
+     "children": [
+      {"name": "Lista Verde", "size": 7074},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    },
+    {
+     "name": "14",
+     "children": [
+      {"name": "Lista Verde", "size": 7074},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    },
+    {
+     "name": "15",
+     "children": [
+      {"name": "Lista Verde", "size": 7074},
+      {"name": "Lista Roja", "size": 5731},
+      {"name": "Nulo", "size": 7840},
+      {"name": "Blanco", "size": 5914},
+      {"name": "Observado", "size": 3416}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Roffo",
+   "children": [
+    {
+        "name": "16",
+        "children": [
+         {"name": "Lista Verde", "size": 3938},
+         {"name": "Lista Roja", "size": 3812},
+         {"name": "Nulo", "size": 6714},
+         {"name": "Blanco", "size": 743},
+         {"name": "Observado", "size": 3938}
+        ]
+    },
+    {
+        "name": "17",
+        "children": [
+         {"name": "Lista Verde", "size": 7074},
+         {"name": "Lista Roja", "size": 5731},
+         {"name": "Nulo", "size": 7840},
+         {"name": "Blanco", "size": 5914},
+         {"name": "Observado", "size": 3416}
+        ]
+    }
+   ]
+  },
+  {
+   "name": "Lanari",
+   "children": [
+    {
+        "name": "18",
+        "children": [
+         {"name": "Lista Verde", "size": 3938},
+         {"name": "Lista Roja", "size": 3812},
+         {"name": "Nulo", "size": 6714},
+         {"name": "Blanco", "size": 743},
+         {"name": "Observado", "size": 3938}
+        ]
+    },
+    {
+        "name": "19",
+        "children": [
+         {"name": "Lista Verde", "size": 7074},
+         {"name": "Lista Roja", "size": 5731},
+         {"name": "Nulo", "size": 7840},
+         {"name": "Blanco", "size": 5914},
+         {"name": "Observado", "size": 3416}
+        ]
+    }
+   ]
+  },
+  {
+   "name": "Tisio",
+   "children": [
+    {
+        "name": "20",
+        "children": [
+         {"name": "Lista Verde", "size": 3938},
+         {"name": "Lista Roja", "size": 3812},
+         {"name": "Nulo", "size": 6714},
+         {"name": "Blanco", "size": 743},
+         {"name": "Observado", "size": 3938}
+        ]
+    }
+   ]
+  },
+  {
+   "name": "Agronomia",
+   "children": [
+    {
+        "name": "21",
+        "children": [
+         {"name": "Lista Verde", "size": 3938},
+         {"name": "Lista Roja", "size": 3812},
+         {"name": "Nulo", "size": 6714},
+         {"name": "Blanco", "size": 743},
+         {"name": "Observado", "size": 3938}
+        ]
+    }
+   ]
+  },
+  {
+   "name": "Arquitectura",
+   "children": [
+    {
+        "name": "22",
+        "children": [
+         {"name": "Lista Verde", "size": 3938},
+         {"name": "Lista Roja", "size": 3812},
+         {"name": "Nulo", "size": 6714},
+         {"name": "Blanco", "size": 743},
+         {"name": "Observado", "size": 3938}
+        ]
+    },
+    {
+        "name": "23",
+        "children": [
+         {"name": "Lista Verde", "size": 7074},
+         {"name": "Lista Roja", "size": 5731},
+         {"name": "Nulo", "size": 7840},
+         {"name": "Blanco", "size": 5914},
+         {"name": "Observado", "size": 3416}
+        ]
+    }
+   ]
+  },
+  {
+   "name": "Pellegrini",
+   "children": [
+    {
+        "name": "24",
+        "children": [
+         {"name": "Lista Verde", "size": 3938},
+         {"name": "Lista Roja", "size": 3812},
+         {"name": "Nulo", "size": 6714},
+         {"name": "Blanco", "size": 743},
+         {"name": "Observado", "size": 3938}
+        ]
+    }
+   ]
+  },
+  {
+    "name": "CBC",
+    "children": [
+     {
+      "name": "25",
+      "children": [
+       {"name": "Lista Verde", "size": 3938},
+       {"name": "Lista Roja", "size": 3812},
+       {"name": "Nulo", "size": 6714},
+       {"name": "Blanco", "size": 743},
+       {"name": "Observado", "size": 3938}
+      ]
+     },
+     {
+      "name": "26",
+      "children": [
+       {"name": "Lista Verde", "size": 3534},
+       {"name": "Lista Roja", "size": 5731},
+       {"name": "Nulo", "size": 7840},
+       {"name": "Blanco", "size": 5914},
+       {"name": "Observado", "size": 3416}
+      ]
+     },
+     {
+      "name": "27",
+      "children": [
+       {"name": "Lista Verde", "size": 7074},
+       {"name": "Lista Roja", "size": 5731},
+       {"name": "Nulo", "size": 7840},
+       {"name": "Blanco", "size": 5914},
+       {"name": "Observado", "size": 3416}
+      ]
+     },
+     {
+      "name": "28",
+      "children": [
+       {"name": "Lista Verde", "size": 7074},
+       {"name": "Lista Roja", "size": 5731},
+       {"name": "Nulo", "size": 7840},
+       {"name": "Blanco", "size": 5914},
+       {"name": "Observado", "size": 3416}
+      ]
+     },
+     {
+      "name": "29",
+      "children": [
+       {"name": "Lista Verde", "size": 7074},
+       {"name": "Lista Roja", "size": 5731},
+       {"name": "Nulo", "size": 7840},
+       {"name": "Blanco", "size": 5914},
+       {"name": "Observado", "size": 3416}
+      ]
+     },
+     {
+      "name": "30",
+      "children": [
+       {"name": "Lista Verde", "size": 7074},
+       {"name": "Lista Roja", "size": 5731},
+       {"name": "Nulo", "size": 7840},
+       {"name": "Blanco", "size": 5914},
+       {"name": "Observado", "size": 3416}
+      ]
+     },
+     {
+      "name": "31",
+      "children": [
+       {"name": "Lista Verde", "size": 7074},
+       {"name": "Lista Roja", "size": 5731},
+       {"name": "Nulo", "size": 7840},
+       {"name": "Blanco", "size": 5914},
+       {"name": "Observado", "size": 3416}
+      ]
+     },
+     {
+      "name": "32",
+      "children": [
+       {"name": "Lista Verde", "size": 7074},
+       {"name": "Lista Roja", "size": 5731},
+       {"name": "Nulo", "size": 7840},
+       {"name": "Blanco", "size": 5914},
+       {"name": "Observado", "size": 3416}
+      ]
+     },
+     {
+      "name": "33",
+      "children": [
+       {"name": "Lista Verde", "size": 7074},
+       {"name": "Lista Roja", "size": 5731},
+       {"name": "Nulo", "size": 7840},
+       {"name": "Blanco", "size": 5914},
+       {"name": "Observado", "size": 3416}
+      ]
+     },
+     {
+      "name": "34",
+      "children": [
+       {"name": "Lista Verde", "size": 7074},
+       {"name": "Lista Roja", "size": 5731},
+       {"name": "Nulo", "size": 7840},
+       {"name": "Blanco", "size": 5914},
+       {"name": "Observado", "size": 3416}
+      ]
+     }
+    ]
+   },
+   {
+       "name": "Deportes",
+       "children": [
+           {
+               "name": "35",
+               "children": [
+                   {"name": "Lista Verde", "size": 3938},
+                   {"name": "Lista Roja", "size": 3812},
+                   {"name": "Nulo", "size": 6714},
+                   {"name": "Blanco", "size": 743},
+                   {"name": "Observado", "size": 3938}
+                ]
+            }
+        ]
+    },
+    {
+     "name": "Derecho",
+     "children": [
+      {
+          "name": "36",
+          "children": [
+           {"name": "Lista Verde", "size": 3938},
+           {"name": "Lista Roja", "size": 3812},
+           {"name": "Nulo", "size": 6714},
+           {"name": "Blanco", "size": 743},
+           {"name": "Observado", "size": 3938}
+          ]
+      },
+      {
+          "name": "37",
+          "children": [
+           {"name": "Lista Verde", "size": 7074},
+           {"name": "Lista Roja", "size": 5731},
+           {"name": "Nulo", "size": 7840},
+           {"name": "Blanco", "size": 5914},
+           {"name": "Observado", "size": 3416}
+          ]
+      }
+     ]
+    },
+    {
+        "name": "Economicas",
+        "children": [
+         {
+             "name": "38",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "39",
+             "children": [
+              {"name": "Lista Verde", "size": 7074},
+              {"name": "Lista Roja", "size": 5731},
+              {"name": "Nulo", "size": 7840},
+              {"name": "Blanco", "size": 5914},
+              {"name": "Observado", "size": 3416}
+             ]
+         }
+        ]
+    },
+    {
+        "name": "Exactas",
+        "children": [
+         {
+             "name": "40",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "41",
+             "children": [
+              {"name": "Lista Verde", "size": 7074},
+              {"name": "Lista Roja", "size": 5731},
+              {"name": "Nulo", "size": 7840},
+              {"name": "Blanco", "size": 5914},
+              {"name": "Observado", "size": 3416}
+             ]
+         }
+        ]
+    },
+    {
+        "name": "Farmacia",
+        "children": [
+         {
+             "name": "42",
+             "children": [
+              {"name": "Lista Verde", "size": 7074},
+              {"name": "Lista Roja", "size": 5731},
+              {"name": "Nulo", "size": 7840},
+              {"name": "Blanco", "size": 5914},
+              {"name": "Observado", "size": 3416}
+             ]
+         }
+        ]
+    },
+    {
+        "name": "Ingenieria",
+        "children": [
+         {
+             "name": "43",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "44",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "45",
+             "children": [
+              {"name": "Lista Verde", "size": 7074},
+              {"name": "Lista Roja", "size": 5731},
+              {"name": "Nulo", "size": 7840},
+              {"name": "Blanco", "size": 5914},
+              {"name": "Observado", "size": 3416}
+             ]
+         }
+        ]
+    },
+    {
+        "name": "Medicina",
+        "children": [
+         {
+             "name": "46",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "47",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "48",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "49",
+             "children": [
+              {"name": "Lista Verde", "size": 7074},
+              {"name": "Lista Roja", "size": 5731},
+              {"name": "Nulo", "size": 7840},
+              {"name": "Blanco", "size": 5914},
+              {"name": "Observado", "size": 3416}
+             ]
+         }
+        ]
+    },
+    {
+   "name": "Nacional Bs As",
+   "children": [
+                {
+                    "name": "50",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                }
+            ]
+    },
+    {
+   "name": "Dosuba",
+   "children": [
+                {
+                    "name": "51",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                },
+                {
+                    "name": "52",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                }
+            ]
+    },
+    {
+   "name": "Odontologia",
+   "children": [
+                {
+                    "name": "53",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                },
+                {
+                    "name": "54",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                }
+            ]
+    },
+    {
+   "name": "Psicologia",
+   "children": [
+                {
+                    "name": "55",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                },
+                {
+                    "name": "56",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                }
+            ]
+    },
+    {
+   "name": "Rojas",
+   "children": [
+                {
+                    "name": "55",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                }
+            ]
+    },
+    {
+        "name": "Rectorado",
+        "children": [
+         {
+             "name": "58",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "59",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "60",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "61",
+             "children": [
+              {"name": "Lista Verde", "size": 7074},
+              {"name": "Lista Roja", "size": 5731},
+              {"name": "Nulo", "size": 7840},
+              {"name": "Blanco", "size": 5914},
+              {"name": "Observado", "size": 3416}
+             ]
+         },
+         {
+             "name": "62",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "63",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "64",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "65",
+             "children": [
+              {"name": "Lista Verde", "size": 3938},
+              {"name": "Lista Roja", "size": 3812},
+              {"name": "Nulo", "size": 6714},
+              {"name": "Blanco", "size": 743},
+              {"name": "Observado", "size": 3938}
+             ]
+         },
+         {
+             "name": "66",
+             "children": [
+              {"name": "Lista Verde", "size": 7074},
+              {"name": "Lista Roja", "size": 5731},
+              {"name": "Nulo", "size": 7840},
+              {"name": "Blanco", "size": 5914},
+              {"name": "Observado", "size": 3416}
+             ]
+         }
+        ]
+    },
+    {
+        "name": "Sociales",
+        "children": [
+                     {
+                         "name": "67",
+                         "children": [
+                         {"name": "Lista Verde", "size": 3938},
+                         {"name": "Lista Roja", "size": 3812},
+                         {"name": "Nulo", "size": 6714},
+                         {"name": "Blanco", "size": 743},
+                         {"name": "Observado", "size": 3938}
+                         ]
+                     },
+                     {
+                         "name": "68",
+                         "children": [
+                         {"name": "Lista Verde", "size": 3938},
+                         {"name": "Lista Roja", "size": 3812},
+                         {"name": "Nulo", "size": 6714},
+                         {"name": "Blanco", "size": 743},
+                         {"name": "Observado", "size": 3938}
+                         ]
+                     }
+                 ]
+    },
+{
+"name": "Veterinaria",
+"children": [
+                {
+                    "name": "69",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                },
+                {
+                    "name": "70",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                }
+            ]
+    },
+    {
+    "name": "Filosofia",
+    "children": [
+                {
+                    "name": "71",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                },
+                {
+                    "name": "72",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                },
+                {
+                    "name": "73",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                },
+                {
+                    "name": "74",
+                    "children": [
+                    {"name": "Lista Verde", "size": 3938},
+                    {"name": "Lista Roja", "size": 3812},
+                    {"name": "Nulo", "size": 6714},
+                    {"name": "Blanco", "size": 743},
+                    {"name": "Observado", "size": 3938}
+                    ]
+                }
+            ]
+        },
+        {
+        "name": "Jubilados",
+        "children": [
+                    {
+                        "name": "75",
+                        "children": [
+                        {"name": "Lista Verde", "size": 3938},
+                        {"name": "Lista Roja", "size": 3812},
+                        {"name": "Nulo", "size": 6714},
+                        {"name": "Blanco", "size": 743},
+                        {"name": "Observado", "size": 3938}
+                        ]
+                    },
+                    {
+                        "name": "76",
+                        "children": [
+                        {"name": "Lista Verde", "size": 3938},
+                        {"name": "Lista Roja", "size": 3812},
+                        {"name": "Nulo", "size": 6714},
+                        {"name": "Blanco", "size": 743},
+                        {"name": "Observado", "size": 3938}
+                        ]
+                    }
+                ]
+            }
+ ]
+}
