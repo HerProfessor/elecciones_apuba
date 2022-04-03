@@ -28,13 +28,13 @@
       <button type="submit">Enviar</button>
     </form> --}}
   <div class="container">
-    {{!-- <div class="border mt-3 text-center bg-primary p-3 rounded-1"> --}}
-            <h1 class="mb-5 text-white">Ingreso los datos.</h1>
+    <div class="border mt-3 text-center bg-primary p-3 rounded-1">
+            <h1 class="mb-5 text-white">Ingreso de datos.</h1>
           <form action="" method="POST">
               <select class="form-select mb-5 text-center" aria-label="Default select example" id="combobox1">
                 <option selected>Selecione Sede</option>
               </select>
-              <select class="form-select text-center" aria-label="Default select example" id="combobox2">
+              <select class="form-select text-center" aria-label="Default select example" id="combobox2" name="urna">
                   <option selected>-------</option>
               </select>
               {{!-- <div>
@@ -57,13 +57,10 @@
                 {{!-- <label for="blanco">Blancos</label> --}}
                 <input type="blanco" id="blanco" name="blanco" placeholder="Blancos"/>
               </div>
-              <div>
-                {{!-- <label for="observado">Observados</label> --}}
-                <input type="number" id="observado" name="observado" placeholder="Observados"/>
-              </div>
               <button type="submit">Enviar</button>
             </form>
-    {{!-- </div> --}}
+            <a href="/auth/logout" class="btn btn-secondary">Logout</a>
+    </div>
   </div>
   <!-- añadimos el archivo javascript -->
-  <script src="static/js/formulario.js"></script>
+  <script src="/static/js/formulario.js"></script>

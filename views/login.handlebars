@@ -1,35 +1,29 @@
-    <h1>Pagina de Login</h1>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-
-    <a href="#" onclick="signOut();">Sign out</a>
-    <script>
-    function signOut() {
-        var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function () {
-        console.log('User signed out.');
-        });
-    }
-    </script>
-
-    <script>
-    function onSignIn(googleUser) {
-        // var profile = googleUser.getBasicProfile();
-        // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        // console.log('Name: ' + profile.getName());
-        // console.log('Image URL: ' + profile.getImageUrl());
-        // console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-        var id_token = googleUser.getAuthResponse().id_token;
-        // console.log(id_token);
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/login');
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.onload = function() {
-            console.log('Signed in as: ' + xhr.responseText);
-            if(xhr.responseText == 'success'){
-                signOut();
-                location.assign('/editor')
-            }
-        };
-        xhr.send(JSON.stringify({token : id_token}));
-      }
-    </script>
+<body class="is-preload">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-6 m-auto">
+                <div class="card card-body text-center">
+                    <h1 class="mb-3">
+                        <img src="../static/images/secure-icon.png" alt="icon" width="20%" />
+                    </h1>
+                    <h2>
+                        Login
+                    </h2>
+                    {{!-- <%- include ("./messages") %> --}}
+                    <form action="/auth/login" method="POST">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" class="form-control"
+                                placeholder="Enter Password" />
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
