@@ -11,31 +11,31 @@
 				</a>
 			</div>                 
 			<div class="buy-button">
-				<a href="#" target="_blank">
+				<a href="/form" target="">
 					<div class="btn btn-primary login-btn-primary">Ingresar</div>
 					<div class="btn btn-light login-btn-light">Ingresar</div>
 				</a>
 			</div><!--end login button-->
 			<!-- End Logo container-->
-			<div class="menu-extras">
-				<div class="menu-item">
-					<!-- Mobile menu toggle-->
-					<a class="navbar-toggle">
-						<div class="lines">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-					</a>
-					<!-- End mobile menu toggle-->
-				</div>
-			</div>
+				{{!-- <div class="menu-extras">
+					<div class="menu-item">
+						<!-- Mobile menu toggle-->
+						<a class="navbar-toggle">
+							<div class="lines">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</a>
+						<!-- End mobile menu toggle-->
+					</div>
+				</div> --}}
 	
 	
 				<div class="buy-menu-btn d-none">
-					<a href="#" target="_blank" class="btn btn-primary">Ingresar</a>
+					<a href="/form" target="" class="btn btn-primary">Ingresar</a>
 				</div><!--end login button-->
-			</div><!--end navigation-->
+
 		</div><!--end container-->
 	</header><!--end header-->
 	<!-- Navbar End -->
@@ -47,47 +47,86 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-10 text-center">
 					<div class="title-heading">
-						<h4 class="text-success mb-3">11th October, 2020</h4>
-						<h1 class="display-4 title-dark text-white font-weight-bold mb-3">Digital Conference 2020-21</h1>
-						<p class="para-desc title-dark mx-auto text-light">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
+						<h4 class="text-success mb-3">07 de Abril, 2022</h4>
+						<h1 class="display-4 title-dark text-white font-weight-bold mb-3">Elecciones Apuba 2022</h1>
+						<p class="para-desc title-dark mx-auto text-light">Votación por el cargo de Secretario General de la Asociación del Personal de la UBA.</p>
 						
 						<div class="row">
 							<div class="col-md-12 text-center">
 								<div id="eventdown"></div>
 							</div>
 						</div>
-
 						<div class="mt-4 pt-2">
-							<a href="javascript:void(0)" class="btn btn-success mt-2 mr-2"><i class="mdi mdi-ticket"></i> Buy Tickets</a>
+							<a href="#one" class="btn btn-success mt-2 mr-2"><i class="mdi mdi-ticket"></i> Ver los Resultados </a>
 						</div>
 					</div>
 				</div><!--end col-->
 			</div><!--end row-->
 		</div><!--end container-->
 	</section><!--end section-->
-	<div class="position-relative">
+	<div id="one" class="position-relative">
 		<div class="shape overflow-hidden text-footer">
 			<div class="text-center bg-white p-4">
-				<h5 class="text-dark mb-0">Next Event : 15th March, 2021</h5>
+				<h5 class="text-dark mb-0">Escrutinio : 07 Abril, 18hs</h5>
 			</div>
 		</div>
 	</div>
 	<!-- Hero End -->
 
 	<!-- About START -->
-	<section class="section border-top">
+	<section  class="section border-top">
 		<div class="container">
 			<div class="card rounded shadow border-0 bg-light overflow-hidden">
 				<div class="row no-gutters align-items-center">
 					<div class="col-lg-6">
-						{{>parciales}}
+							{{>parciales}}
+	
 					</div><!--end col-->
 					<div class="col-lg-6">
 						<div class="card-body section-title p-md-5">
-							<h4 class="title mb-4">Business Startup Conference</h4>
-							<p class="text-muted para-desc mb-0">Start working with Apuba that can provide everything you need to generate awareness, drive traffic, connect. Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page managing conversion centered bootstrap4 html page.</p>
-							<div class="mt-4 pt-2">
-								<a href="javascript:void(0)" class="btn btn-outline-primary">Read More <i class="mdi mdi-chevron-right"></i></a>
+							<div class="d-flex justify-content-between">
+								<div class="media align-items-center">
+									<a class="pr-3" href="#">
+										<img style="background-color: #31b442;" class="img-fluid avatar avatar-md-sm rounded-circle">
+									</a>
+									<div class="commentor-detail">
+										<h6 class="mb-0"><a href="javascript:void(0)" class="text-dark media-heading">{{verde}} %</a></h6>
+										<small class="text-muted">Lista Verde</small>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between">
+								<div class="media align-items-center">
+									<a class="pr-3" href="#">
+										<img style="background-color: #bb2c1f;" class="img-fluid avatar avatar-md-sm rounded-circle shadow">
+									</a>
+									<div class="commentor-detail">
+										<h6 class="mb-0"><a href="javascript:void(0)" class="text-dark media-heading">{{roja}} %</a></h6>
+										<small class="text-muted">Lista Roja</small>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between">
+								<div class="media align-items-center">
+									<a class="pr-3" href="#">
+										<img style="background-color: #d4d4d4;" class="img-fluid avatar avatar-md-sm rounded-circle shadow">
+									</a>
+									<div class="commentor-detail">
+										<h6 class="mb-0"><a href="javascript:void(0)" class="text-dark media-heading">{{blancos}} %</a></h6>
+										<small class="text-muted">Votos en Blanco</small>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between">
+								<div class="media align-items-center">
+									<a class="pr-3" href="#">
+										<img style="background-color: #777777;" class="img-fluid avatar avatar-md-sm rounded-circle shadow">
+									</a>
+									<div class="commentor-detail">
+										<h6 class="mb-0"><a href="javascript:void(0)" class="text-dark media-heading">{{nulos}}</a></h6>
+										<small class="text-muted">Votos Nulos</small>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div><!--end col-->
@@ -178,91 +217,3 @@
 	<a href="#" class="btn btn-icon btn-soft-primary back-to-top"><i data-feather="arrow-up" class="icons"></i></a>
 	<!-- Back to top -->
 </body>
-{{!-- <body class="is-preload">
-
-		<!-- Header -->
-			<section id="header">
-				<div class="inner">	
-					<span><i class="icon solid major fa fa-envelope"></i></span>
-					<h1>Elecciones <strong>2022</strong><br/>
-					<strong>APUBA</strong>.</h1>
-					<p>Vea los resultados de todas las sedes y de cada una de las urnas, <br/>a medida que se cargan los resultados.</p>
-					<ul class="actions special">
-						<li><a href="#one" class="button scrolly">VEA LOS RESULTADOS</a></li>
-					</ul>
-				</div>
-			</section>
-
-		<!-- One -->
-			<section id="one" class="main style1">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium imp-medium">
-							{{>parciales}}
-						</div>
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>Lorem ipsum dolor adipiscing<br />
-								amet dolor consequat</h2>
-							</header>
-							<p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		<!-- Three -->
-			<section id="three" class="main style1 special">
-				<div class="container">
-					<header class="major">
-						<h2>Adipiscing amet consequat</h2>
-					</header>
-					<p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
-					<div class="row gtr-150">
-						{{>lista}}
-					</div>
-				</div>
-			</section>
-				<div class="container" style="padding: 2rem; display: center">
-			        <button type="button" class="button scrolly">
-						Ver todos los datos.	
-					</button>
-				</div>
-		<!-- Four -->
-			<section id="four" class="main style2 special">
-				<div class="container">
-					<header class="major">
-						<h2>Ingresar datos?</h2>
-					</header>
-					<p>Por favor, ingrese en la plataforma.</p>
-					<ul class="actions special">
-						<li><a href="/form" class="button wide primary">Entrar</a></li>
-					</ul>
-				</div>
-			</section>
-
-		<!-- Footer -->
-			<section id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Apuba 2022</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</section>
-
-	</body> --}}
-
-		<!-- Scripts -->
-    {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/static/js/browser.min.js"></script>
-    <script src="/static/js/jquery.scrolly.min.js"></script>
-    <script src="/static/js/breakpoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollex/0.2.1/jquery.scrollex.min.js"></script>
-    <script src="/static/js/util.js"></script>
-    <script src="/static/js/main.js"></script> --}}
-    
-    {{!-- <script type="module" src="./static/js/index.js"></script> --}}
-
