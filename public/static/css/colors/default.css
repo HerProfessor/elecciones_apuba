@@ -189,7 +189,7 @@ a.text-primary:focus {
 }
 
 .bg-overlay-gradient {
-    background-color: rgba(47, 85, 212, 0.6);
+    /* background-color: rgba(47, 85, 212, 0.6); */
 }
 
 .bg-overlay-gradient2 {

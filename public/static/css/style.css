@@ -2060,7 +2060,7 @@ p {
 }
 
 .bg-overlay {
-  background-color: rgba(60, 72, 88, 0.7);
+  /* background-color: rgba(60, 72, 88, 0.7); */
   position: absolute;
   top: 0;
   right: 0;
@@ -2071,7 +2071,7 @@ p {
 }
 
 .bg-overlay-gradient {
-  background-color: rgba(47, 85, 212, 0.6);
+  /* background-color: rgba(47, 85, 212, 0.6); */
 }
 
 .bg-overlay-white {

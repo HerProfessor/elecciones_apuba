@@ -1,37 +1,82 @@
-  <div class="container">
-    <div class="border mt-3 text-center bg-primary p-3 rounded-1">
-            <h1 class="mb-5 text-white">Ingreso de datos.</h1>
-          <form action="" method="POST">
-              <select class="form-select mb-5 text-center" aria-label="Default select example" id="combobox1">
-                <option selected>Selecione Sede</option>
-              </select>
-              <select class="form-select text-center" aria-label="Default select example" id="combobox2" name="urna">
-                  <option selected>-------</option>
-              </select>
-              {{!-- <div>
-                <label for="urna">Urna</label>
-                <input type="number" id="urna" name="urna" />
-              </div> --}}
-              <div>
-                {{!-- <label for="lista_verde">Lista Verde</label> --}}
-                <input type="number" id="lista_verde" name="lista_verde" placeholder="Lista Verde" />
-              </div>
-              <div>
-                {{!-- <label for="lista_roja">Lista Roja</label> --}}
-                <input type="number" id="lista_roja" name="lista_roja" placeholder="Lista Roja"/>
-              </div>
-              <div>
-                {{!-- <label for="nulo">Nulos</label> --}}
-                <input type="number" id="nulo" name="nulo" placeholder="Nulos"/>
-              </div>
-              <div>
-                {{!-- <label for="blanco">Blancos</label> --}}
-                <input type="blanco" id="blanco" name="blanco" placeholder="Blancos"/>
-              </div>
-              <button type="submit">Enviar</button>
-            </form>
-            <a href="/auth/logout" class="btn btn-secondary">Logout</a>
-    </div>
+<body>
+        <!-- Loader -->
+        <!-- <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Loader -->
+
+  <div class="back-to-home rounded d-none d-sm-block">
+      <a href="/" class="btn btn-icon btn-soft-primary"><i data-feather="home" class="icons"></i></a>
   </div>
-  <!-- añadimos el archivo javascript -->
-  <script src="/static/js/formulario.js"></script>
+        
+        <!-- Hero Start -->
+  <section class="bg-home bg-circle-gradiant d-flex align-items-center">
+      <div class="bg-overlay bg-overlay-white"></div>
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-5 col-md-8"> 
+                  <div class="card login-page bg-white shadow rounded border-0">
+                      <div class="card-body">
+                          <h4 class="card-title text-center">Ingreso de datos.</h4>  
+                          <form class="login-form mt-4" action="" method="POST">
+                              <div class="row">
+                                  <div class="col-lg-12">
+                                      <div class="form-group position-relative">
+                                          <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="combobox1">
+                                            <option selected>Selecione Sede</option>
+                                          </select>
+                                          <select class="form-select text-center" aria-label="Default select example" id="combobox2" name="urna">
+                                              <option selected>Seleccione Urna</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-12">
+                                      <div class="form-group position-relative">
+                                          <label>Lista Verde <span class="text-danger">*</span></label>
+                                          <i data-feather="terminal" class="fea icon-sm icons"></i>
+                                          <input type="number" class="form-control pl-5" id="lista_verde"placeholder="Lista Verde" name="lista_verde" required="">
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-12">
+                                      <div class="form-group position-relative">
+                                          <label>Lista Roja <span class="text-danger">*</span></label>
+                                          <i data-feather="terminal" class="fea icon-sm icons"></i>
+                                          <input type="number" class="form-control pl-5" id="lista_roja"placeholder="Lista Roja" name="lista_roja" required="">
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-12">
+                                      <div class="form-group position-relative">
+                                          <label>Votos nulos <span class="text-danger">*</span></label>
+                                          <i data-feather="terminal" class="fea icon-sm icons"></i>
+                                          <input type="number" class="form-control pl-5" id="nulo"placeholder="Votos nulos" name="nulo" required="">
+                                      </div>
+                                  </div>
+
+                                  <div class="col-lg-12">
+                                      <div class="form-group position-relative">
+                                          <label>Votos en Blanco <span class="text-danger">*</span></label>
+                                          <i data-feather="terminal" class="fea icon-sm icons"></i>
+                                          <input type="number" class="form-control pl-5" id="blanco" name="blanco" placeholder="Votos en blanco" required="">
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-12 mb-0">
+                                      <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                                      </br>
+                                      <button href="/auth/logout" class="btn btn-secondary btn-block">Desconectar</button>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div><!---->
+              </div><!--end col-->
+          </div><!--end row-->
+      </div> <!--end container-->
+  </section><!--end section-->
+</body>
+
+<script src="/static/js/formulario.js"></script>

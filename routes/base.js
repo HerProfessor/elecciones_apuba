@@ -31,7 +31,7 @@ router.get('/', async (req, res) => {
   const getRows = await googleSheets.spreadsheets.values.get({
     auth,
     spreadsheetId,
-    range: "Sheet2!A1:K",
+    range: "Sheet2!A1:L",
   });
 
 
@@ -40,10 +40,18 @@ router.get('/', async (req, res) => {
   const roja_gral = data[1][7]
   const nulos = data[1][8]
   const blancos = data[1][9]
+  const mesas = data[1][11]
  
   // console.log(verde_gral, roja_gral, nulos, blancos);
 
-    res.status(200).render('home', { sedes: arrayToJSONObject(data), verde: verde_gral, roja: roja_gral, nulos: nulos, blancos: blancos});
+    res.status(200).render('home', { 
+      sedes: arrayToJSONObject(data), 
+      verde: verde_gral, 
+      roja: roja_gral, 
+      nulos: nulos, 
+      blancos: blancos,
+      mesas: mesas
+    });
 
 });
 
@@ -54,8 +62,6 @@ router.get("/totales", (req, res) => {
 router.post("/form", async (req, res) => {
   const { urna, lista_verde, lista_roja, nulo, blanco } = req.body;
   const rango = parseInt(urna) + 1
-  console.log(`urna ${urna} lista_verde ${lista_verde} lista_roja ${lista_roja} nulo ${nulo}`)
-  console.log(req.body)
   const auth = new google.auth.GoogleAuth({
     // keyFile: "credentials02.json",
     credentials: creds,
@@ -89,14 +95,15 @@ router.post("/form", async (req, res) => {
     resource: sheetResource
   }, function (err, response) {
     if (err) {
+      // req.toastr.error('Ha ocurrido un error', '¡ERROR!');
         console.log('The API returned an error: ' + err);
     } else {
-        console.log('Succesa');   
-        console.log(response);
-        
+      // req.flash('success_msg')
+      console.log('Succesa');   
     }
- });
-
+  });
+  
+  // req.toastr.success('La carga se ha registrado.');
   res.render('form')
 });
 
@@ -114,8 +121,9 @@ router.get('/api/data', (req, res) => {
 
 
 //------------ Form Route ------------//
+// router.get('/form', (req, res) => res.render('form', {
 router.get('/form', ensureAuthenticated, (req, res) => res.render('form', {
-    name: req.user.name
+    // name: req.user.name
 }));
 
 module.exports = router;
