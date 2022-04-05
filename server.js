@@ -1,7 +1,7 @@
 const cookieParser = require("cookie-parser");
 const express = require("express");
 // var cors = require('cors')
-const { engine } = require('express-handlebars');
+const { create } = require('express-handlebars');
 
 const mongoose = require('mongoose');
 const session = require('express-session');
@@ -34,7 +34,15 @@ const app = express();
 // app.use(cors())
 app.use(express.static(__dirname + '/public'));
 
-app.engine('handlebars', engine());
+const hbs = create({
+  // Specify helpers which are only registered on this instance.
+  helpers: {
+      lowerC(input) { var output = input.toLowerCase();
+        return output.replace(" ", ""); },
+  }
+});
+
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', './views/partials')
 app.set('views', './views');
