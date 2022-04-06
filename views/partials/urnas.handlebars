@@ -1,0 +1,43 @@
+{{#each urnas}}
+                <div class="col-lg-4 col-md-6 mt-4 pt-2">
+					<div class="card blog rounded border-0 shadow">
+						<div class="card-body content">
+                            <div class="widget">
+                                <h5 class="widget-title">URNA: {{this.urna}}</h5>
+                                <div class="row mt-4">
+                                    <div class="col-6 text-center">
+                                        <i data-feather="users" class="fea icon-ex-md text-primary-v mb-1"></i>
+                                        <h5 class="mb-0">{{this.verde}}</h5>
+                                        <p class="text-muted mb-0">Lista 12</p>
+                                    </div><!--end col-->
+
+                                    <div class="col-6 text-center">
+                                        <i data-feather="users" class="fea icon-ex-md text-primary-r mb-1"></i>
+                                        <h5 class="mb-0">{{this.roja}}</h5>
+                                        <p class="text-muted mb-0">Lista 9</p>
+                                    </div><!--end col-->
+
+                                    <div class="col-6 text-center">
+                                        </br>
+                                        <h5 class="mb-0">{{this.nulos}}</h5>
+                                        <p class="text-muted mb-0">Nulos</p>
+                                    </div><!--end col-->
+
+                                    <div class="col-6 text-center">
+                                        </br>
+                                        <h5 class="mb-0">{{this.blancos}}</h5>
+                                        <p class="text-muted mb-0">Blancos</p>
+                                    </div><!--end col-->
+                                </div><!--end row-->
+                            </div>
+                            <div class="post-meta d-flex justify-content-between mt-3">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="list-inline-item mr-2 mb-0"><a href="javascript:void(0)" class="text-muted like"></li>
+                                        <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"></li>
+                                    </ul>
+                                    <a href="/" class="text-muted readmore">Volver<i class="mdi mdi-chevron-right"></i></a>
+                            </div>
+						</div>
+					</div>
+				</div><!--end col-->
+{{/each}}

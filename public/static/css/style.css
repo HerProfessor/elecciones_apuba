@@ -40,8 +40,12 @@
   color: #2f55d4 !important;
 }
 
-.text-primary {
-  color: #2f55d4 !important;
+.text-primary-v{
+  color: #2fd46e !important;
+}
+
+.text-primary-r{
+  color: #d4482f !important;
 }
 
 a {

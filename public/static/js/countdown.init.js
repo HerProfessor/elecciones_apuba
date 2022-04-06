@@ -1,6 +1,6 @@
 //countdown.init.js
 
-let d1 = new Date(2022, 3, 7, 18, 00)
+let d1 = new Date(2022, 3, 7, 20, 00)
 
 $('#countdown').countdown('2022, 7, 4, 18, 00', function(event) {
 var $this = $(this).html(event.strftime(''

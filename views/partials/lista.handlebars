@@ -9,13 +9,13 @@
 							<h3><a href="javascript:void(0)" class="card-title title text-dark" style="text-align: center; text-transform: uppercase">{{this.sedes}}</a></h3>
                             <div>
                                 <div class="cajaBarra text-dark">
-                                    <spam><h5>Lista Verde</h4><p>{{this.por_verde}}%</p></spam>
+                                    <spam><h5>Lista 12</h4><p>{{this.por_verde}}%</p></spam>
                                     <div class="barra">
                                         <div class="nivelbarraverde" style="width: {{this.por_verde}}%"></div>
                                     </div>
                                 </div>
                                 <div class="cajaBarra text-dark">
-                                    <spam><h5>Lista Roja</h4><p>{{this.por_roja}}%</p></spam>
+                                    <spam><h5>Lista 9</h4><p>{{this.por_roja}}%</p></spam>
                                     <div class="barra">
                                         <div class="nivelbarraroja" style="width: {{this.por_roja}}%"></div>
                                     </div>
@@ -26,34 +26,9 @@
                                         <li class="list-inline-item mr-2 mb-0"><a href="javascript:void(0)" class="text-muted like"></li>
                                         <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"></li>
                                     </ul>
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{this.sedes}}Modal">
-                                        Launch demo modal
-                                    </button>
-
-                                    {{!-- <a href="/{{lowerC this.sedes}}" class="text-muted readmore">Detalle de Urnas <i class="mdi mdi-chevron-right"></i></a> --}}
+                                    <a href="urnas/{{@index}}" class="text-muted readmore">Detalle de Urnas <i class="mdi mdi-chevron-right"></i></a>
                             </div>
 						</div>
 					</div>
 				</div><!--end col-->
-                <!-- Modal -->
-                <div class="modal fade" id="{{this.sedes}}Modal" tabindex="-1" aria-labelledby="{{this.sedes}}ModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">{{this.sedes}}</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                    </div>
-                </div>
-                </div>
 {{/each}}

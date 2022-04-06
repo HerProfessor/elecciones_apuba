@@ -5,12 +5,47 @@ const { ensureAuthenticated } = require('../config/checkAuth')
 
 const  creds  = require('../utils/creds');
 const arrayToJSONObject = require('../utils/arrayToJSONObject')
+const sliceArrayToJSONObj = require('../utils/sliceArrayToJSONObj')
+const cuantasUrnas = require('../utils/cuantasUrnas')
 
 //------------ Welcome Route ------------//
 // router.get('/', (req, res) => {
 //     res.render('home');
 // });
+router.get('/urnas/:sede', async (req, res) => {
 
+  let id = req.params.sede
+
+  const auth = new google.auth.GoogleAuth({
+    // keyFile: "credentials.json",
+    credentials: creds,
+    scopes: "https://www.googleapis.com/auth/spreadsheets",
+  });
+
+  // Create client instance for auth
+  const client = await auth.getClient();
+
+  // Instance of Google Sheets API
+  const googleSheets = google.sheets({ version: "v4", auth: client });
+
+  const spreadsheetId = process.env.SPREADSHEET_ID;
+  
+  const getUrnas = await googleSheets.spreadsheets.values.get({
+    auth,
+    spreadsheetId,
+    range: "Sheet1!A1:E",
+  });
+
+  const data = await getUrnas.data.values
+  const [sede, idIn, idOut] = cuantasUrnas(id)
+  const grupo = sliceArrayToJSONObj(data, idIn, idOut)
+
+    res.status(200).render('sedes', {  
+      urnas: grupo,
+      sede: sede
+    });
+
+})
 router.get('/', async (req, res) => {
 
   const auth = new google.auth.GoogleAuth({
@@ -33,23 +68,27 @@ router.get('/', async (req, res) => {
     spreadsheetId,
     range: "Sheet2!A1:L",
   });
+  
+  const getUrnas = await googleSheets.spreadsheets.values.get({
+    auth,
+    spreadsheetId,
+    range: "Sheet1!A1:E",
+  });
 
 
+  const dataUrnas = await getUrnas.data.values
   const data = await getRows.data.values
   const verde_gral = data[1][6]
   const roja_gral = data[1][7]
-  const nulos = data[1][8]
-  const blancos = data[1][9]
+  const blancos_gral = data[1][9]
   const mesas = data[1][11]
- 
-  // console.log(verde_gral, roja_gral, nulos, blancos);
 
     res.status(200).render('home', { 
       sedes: arrayToJSONObject(data), 
+      urnas: arrayToJSONObject(dataUrnas),
       verde: verde_gral, 
       roja: roja_gral, 
-      nulos: nulos, 
-      blancos: blancos,
+      blancos: blancos_gral,
       mesas: mesas
     });
 

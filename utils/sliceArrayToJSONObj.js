@@ -1,9 +1,9 @@
-module.exports = function arrayToJSONObject (arr){
+module.exports = function sliceArrayToJSONObj (arr, idIn, idOut){
     //header
-    let keys = arr[0];
+    let keys = ['urna', 'verde', 'roja', 'nulos', 'blancos'];
   
     //vacate keys from main array
-    let newArr = arr.slice(1, arr.length);
+    let newArr = arr.slice(idIn, idOut);
   
     let formatted = [],
     data = newArr,
