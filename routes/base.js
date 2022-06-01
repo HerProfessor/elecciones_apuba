@@ -37,8 +37,12 @@ router.get('/urnas/:sede', async (req, res) => {
   });
 
   const data = await getUrnas.data.values
-  const [sede, idIn, idOut] = cuantasUrnas(id)
-  const grupo = sliceArrayToJSONObj(data, idIn, idOut)
+  const [sede, idIn, idOut, listas] = cuantasUrnas(id)
+  const grupo = sliceArrayToJSONObj(data, idIn, idOut, listas)
+  // console.log("esta es la data ")
+  console.log(grupo)
+  // console.log("este es el grupo ")
+  // console.log(grupo)
 
     res.status(200).render('sedes', {  
       urnas: grupo,

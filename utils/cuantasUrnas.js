@@ -1,11 +1,11 @@
 module.exports = function cuantasUrnas (opcion){
 
     let numSede = {
-        0  : ['Clínicas', 1, 16],
-        1  : ['Roffo', 16, 18],
-        2  : ['Lanari', 18, 20],
-        3  : ['Vaccarezza', 20, 21],
-        4  : ['Agronomía', 21, 22],
+        0  : ['Clínicas', 1, 16, ['urna', 'listaVerde', 'listaRoja', 'blanco', 'nulo']],
+        1  : ['Roffo', 16, 18, ['urna', 'Lista 04', 'Lista 05', 'Lista 06']],
+        2  : ['Lanari', 18, 20, ['Urna', 'Lista 07', 'Lista 08', 'Blanco', 'Nulo']],
+        3  : ['Vaccarezza', 20, 21, ['urna', 'Lista 01', 'Lista 02']],
+        4  : ['Agronomía', 21, 22, ['urna', 'listaVerde', 'listaRoja', 'blanco', 'nulo']],
         5  : ['Arquitectura', 22, 24],
         6  : ['Pellegrini', 24, 25],
         7  : ['CBC', 25, 35],
