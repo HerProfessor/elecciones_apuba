@@ -3,29 +3,26 @@
 					<div class="card blog rounded border-0 shadow">
 						<div class="card-body content">
                             <div class="widget">
-                                <h5 class="widget-title">URNA: {{this.urna}}</h5>
+                                <h5 class="widget-title">URNA: {{Urna}}</h5>
                                 <div class="row mt-4">
-                                    <div class="col-6 text-center">
-                                        <i data-feather="users" class="fea icon-ex-md text-primary-v mb-1"></i>
-                                        <h5 class="mb-0">{{this.listaVerde}}</h5>
-                                        <p class="text-muted mb-0">Lista 12</p>
-                                    </div><!--end col-->
 
+                                    {{#each this.list}}
                                     <div class="col-6 text-center">
-                                        <i data-feather="users" class="fea icon-ex-md text-primary-r mb-1"></i>
-                                        <h5 class="mb-0">{{this.listaRoja}}</h5>
-                                        <p class="text-muted mb-0">Lista 9</p>
+                                        <i data-feather="file" class="fea icon-ex-md text-primary-a mb-1"></i>
+                                        <h5 class="mb-0">{{this}}</h5>
+                                        <p class="text-muted mb-0 Listado" >{{@key}}</p>
                                     </div><!--end col-->
+                                    {{/each}}
 
                                     <div class="col-6 text-center">
                                         </br>
-                                        <h5 class="mb-0">{{this.nulo}}</h5>
+                                        <h5 class="mb-0">{{Nulo}}</h5>
                                         <p class="text-muted mb-0">Nulos</p>
                                     </div><!--end col-->
 
                                     <div class="col-6 text-center">
                                         </br>
-                                        <h5 class="mb-0">{{this.blanco}}</h5>
+                                        <h5 class="mb-0">{{Blanco}}</h5>
                                         <p class="text-muted mb-0">Blancos</p>
                                     </div><!--end col-->
                                 </div><!--end row-->
@@ -40,4 +37,16 @@
 						</div>
 					</div>
 				</div><!--end col-->
+                <script>
+                    let listado = document.getElementsByClassName("Listado");
+                    function replaceText(selector, text, newText, flags) {
+                        const matcher = "\_\";
+                        const elems = document.getElementsByClassName(selector), i;
+
+                        for (i = 0; i < elems.length; i++)
+                            if (!elems[i].childNodes.length)
+                            elems[i].innerHTML = elems[i].innerHTML.replace(matcher, newText);
+                        }
+                    console.log(listado[1].innerHTML)
+                </script>
 {{/each}}
