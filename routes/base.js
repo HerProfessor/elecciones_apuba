@@ -33,7 +33,7 @@ router.get('/urnas/:sede', async (req, res) => {
   const getUrnas = await googleSheets.spreadsheets.values.get({
     auth,
     spreadsheetId,
-    range: "Sheet1!A1:E",
+    range: "Sheet1!A1:R",
   });
 
   const data = await getUrnas.data.values
@@ -76,7 +76,7 @@ router.get('/', async (req, res) => {
   const getUrnas = await googleSheets.spreadsheets.values.get({
     auth,
     spreadsheetId,
-    range: "Sheet1!A1:E",
+    range: "Sheet1!A1:R",
   });
 
 
