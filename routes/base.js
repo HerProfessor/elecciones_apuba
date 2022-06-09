@@ -70,7 +70,7 @@ router.get('/', async (req, res) => {
   const getRows = await googleSheets.spreadsheets.values.get({
     auth,
     spreadsheetId,
-    range: "Sheet2!A1:M",
+    range: "Sheet2!A1:L",
   });
   
   const getUrnas = await googleSheets.spreadsheets.values.get({
@@ -82,23 +82,23 @@ router.get('/', async (req, res) => {
 
   const dataUrnas = await getUrnas.data.values
   const data = await getRows.data.values
-  const verde_gral = data[1][6]
-  const verde_num = data[1][4]
-  const roja_gral = data[1][7]
-  const roja_num = data[1][5]
-  const blancos_gral = data[1][9]
-  const blancos_num = data[1][12]
-  const mesas = data[1][11]
+  const total_gral = data[1][7]
+  const total_por = data[1][11]
+  const nulos_por = data[1][5]
+  const nulos_num = data[1][10]
+  const blancos_por = data[1][6]
+  const blancos_num = data[1][9]
+  const mesas = data[1][8]
 
     res.status(200).render('home', { 
       sedes: arrayToJSONObject(data), 
       urnas: arrayToJSONObject(dataUrnas),
-      verde: verde_gral,
-      verde_n: verde_num,
-      roja: roja_gral, 
-      roja_n: roja_num, 
-      blancos: blancos_gral,
-      blancos_n: blancos_num,
+      total: total_gral,
+      total_p: total_por,
+      nulos_p: nulos_por, 
+      nulos: nulos_num, 
+      blancos_p: blancos_por,
+      blancos: blancos_num,
       mesas: mesas
     });
 

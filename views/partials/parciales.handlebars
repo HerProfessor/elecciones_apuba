@@ -13,14 +13,14 @@
             width = svg.attr("width"),
             height = svg.attr("height"),
             radius = 200;
-        let verde = {{verde}}
-        let roja = {{roja}}
-        let blancos = {{blancos}}
+        let total = {{total_p}}
+        let nulos = {{nulos_p}}
+        let blancos = {{blancos_p}}
 
         
         // Step 1        
-        var data = [{name: "verde", share: verde}, 
-                    {name: "roja", share: roja},
+        var data = [{name: "total", share: total}, 
+                    {name: "nulos", share: nulos},
                     {name: "blancos", share: blancos}];
         
         var g = svg.append("g")
